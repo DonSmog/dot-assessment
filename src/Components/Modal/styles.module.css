@@ -1,0 +1,71 @@
+.selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 100%;
+  color: var(--default);
+}
+
+.selected {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.select_card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  background-color: var(--nominee);
+  border: 1px solid var(--default);
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.nominee {
+  width: 50%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+  .selected {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 834px) {
+  .selected {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
