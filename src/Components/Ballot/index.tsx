@@ -2,22 +2,7 @@ import styles from "./styles.module.css";
 import { useState, useEffect } from "react";
 import { api } from "../../Api/Api";
 import SuccessModal from "../Modal";
-interface ItemsProp {
-  id: string;
-  title: string;
-  items: {
-    id: string;
-    title: string;
-    photoUrL: string;
-  }[];
-}
-
-export interface Selection {
-  id: string;
-  cat_title: string;
-  title: string;
-  photoUrL: string;
-}
+import { ItemsProp, Selection } from "../../types";
 
 const Ballot = () => {
   const [loading, setLoading] = useState(false);

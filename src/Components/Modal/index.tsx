@@ -1,14 +1,8 @@
 import Modal from "react-modal";
-import { Selection } from "../Ballot";
+import { ModalProps } from "../../types";
 import { FC } from "react";
 import close from "../../image/close.png";
 import styles from "./styles.module.css";
-
-interface ModalProps {
-  isOpen: boolean;
-  setIsOpen: (isOpen: boolean) => void;
-  selection: Selection[];
-}
 
 const SuccessModal: FC<ModalProps> = ({ isOpen, setIsOpen, selection }) => {
   return (
