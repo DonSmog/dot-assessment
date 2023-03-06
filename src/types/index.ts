@@ -19,4 +19,5 @@ export interface ModalProps {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
   selection: Selection[];
+  setSelections: (selection: Selection[]) => void;
 }

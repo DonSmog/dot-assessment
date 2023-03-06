@@ -4,7 +4,17 @@ import { FC } from "react";
 import close from "../../image/close.png";
 import styles from "./styles.module.css";
 
-const SuccessModal: FC<ModalProps> = ({ isOpen, setIsOpen, selection }) => {
+const SuccessModal: FC<ModalProps> = ({
+  isOpen,
+  setIsOpen,
+  selection,
+  setSelections,
+}) => {
+  const onClose = () => {
+    setIsOpen(false);
+    setSelections([]);
+  };
+
   return (
     <Modal
       style={{
@@ -33,14 +43,14 @@ const SuccessModal: FC<ModalProps> = ({ isOpen, setIsOpen, selection }) => {
         },
       }}
       isOpen={isOpen}
-      onRequestClose={() => setIsOpen(false)}
+      onRequestClose={onClose}
     >
       <div className={styles.selection}>
         <img
           src={close}
           alt="close"
           className={styles.close}
-          onClick={() => setIsOpen(false)}
+          onClick={onClose}
         />
         <h4 className={styles.title}>Submission Successful</h4>
         <h5>This are your selections</h5>

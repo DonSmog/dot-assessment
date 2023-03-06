@@ -47,6 +47,7 @@ const Ballot = () => {
         isOpen={modalIsOpen}
         setIsOpen={setIsOpen}
         selection={selected}
+        setSelections={setSelected}
       />
 
       <h4 className={styles.award}>GOLDEN GLOBE AWARD</h4>
