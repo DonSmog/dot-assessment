@@ -15,7 +15,7 @@ const SuccessModal: FC<ModalProps> = ({
     setSelections([]);
 
     const inputs = document.querySelectorAll("input:checked");
-    let array = Array.from(inputs) as HTMLInputElement[];
+    const array = Array.from(inputs) as HTMLInputElement[];
     array.forEach((input) => {
       input.checked = false;
     });
