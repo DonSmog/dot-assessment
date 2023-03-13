@@ -13,6 +13,12 @@ const SuccessModal: FC<ModalProps> = ({
   const onClose = () => {
     setIsOpen(false);
     setSelections([]);
+
+    const inputs = document.querySelectorAll("input:checked");
+    let array = Array.from(inputs) as HTMLInputElement[];
+    array.forEach((input) => {
+      input.checked = false;
+    });
   };
 
   return (
