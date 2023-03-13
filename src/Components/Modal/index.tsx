@@ -4,6 +4,8 @@ import { FC } from "react";
 import close from "../../image/close.png";
 import styles from "./styles.module.css";
 
+Modal.setAppElement("#root");
+
 const SuccessModal: FC<ModalProps> = ({
   isOpen,
   setIsOpen,
